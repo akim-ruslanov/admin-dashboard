@@ -1,0 +1,147 @@
+#pfp-small {
+    width: 50px;
+    border-radius: 50%;
+}
+
+body {
+    background: rgb(25,146,212);
+    background: linear-gradient(90deg, rgba(25,146,212,1) 0%, rgba(8,122,185,1) 21%);
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template: auto auto / 1fr 5fr;
+}
+
+.side-bar {
+    grid-row: 1 / 4;
+    box-shadow: 5px 0px 0px #126ea1;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.pages img {
+    width: 30px;
+}
+
+.pages, .preferences {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-items: start;
+    padding: 0;
+    
+}
+
+.header {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.top-bar {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.search-bar {
+    /* Possibly need to grid to make sure its horizontal */
+}
+
+.user-bar {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+}
+
+.user-bar button {
+    height: 50px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.user-actions {
+    grid-template-columns: 2fr 1fr;
+    /* gap: 15%; */
+    /* Instead of gap, justify actions to end? */
+}
+
+.user-profile >img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-self: end;
+
+}
+
+.actions button {
+    border-radius: 12px;
+} 
+
+.user-profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.main-content {
+    display: grid;
+    grid-template: 1fr / 3fr 1fr;
+    gap: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    background: rgb(226,232,240);
+    background: linear-gradient(180deg, rgba(226,232,240,1) 25%, rgba(181,189,200,1) 53%);
+}
+
+.projects {
+    grid-row: 1/3;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 15px;
+}
+
+.side-content {
+    display: grid;
+}
+
+.announcements-grid, .trending-users-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.trending-user {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 4fr;}
+
+.trending-user-pfp {
+    grid-row: 1/3;
+    align-self: center;
+}
+
+.trending-user-pfp img {
+    width: 50px;
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+}
