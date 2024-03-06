@@ -81,6 +81,7 @@ button img {
     display: grid;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 20px 30px 20px 30px;
 }
 
 .top-bar {
@@ -114,6 +115,7 @@ button img {
     grid-template-columns: 1fr 3fr;
     gap: 15px;
     justify-items: center;
+    align-items: center;
 }
 
 .user-bar button {
@@ -129,6 +131,8 @@ button img {
     grid-template-columns: 1fr 3fr;
     gap: 15px;
     justify-items: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .user-actions {
@@ -139,8 +143,20 @@ button img {
     /* Instead of gap, justify actions to end? */
 }
 
-.user-profile >img {
-    width: 100px;
+.user-profile p span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.user-profile-image-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.user-profile-image-container > img {
+    width: 75px;
     border-radius: 50%;
 }
 
@@ -151,15 +167,16 @@ button img {
     justify-items: center;
     align-items: center;
     justify-self: end;
-
 }
 
 .actions button {
-    width: 150px;
+    width: 120px;
     height: 50px;
     border-radius: 30px;
-    padding: auto;
     background: #C6CFC5;
+
+    font-size: 18px;
+    font-weight: 500;
 } 
 
 .user-profile {
@@ -175,6 +192,8 @@ button img {
     padding-left: 15px;
     background: rgb(226,232,240);
     background: linear-gradient(180deg, rgba(226,232,240,1) 25%, rgba(181,189,200,1) 53%);
+
+    box-shadow: inset 0 5px 10px rgb(0 0 0 / 0.2);;
 }
 
 .projects {
@@ -183,8 +202,37 @@ button img {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 15px;
+}
+
+.project {
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, orange 1.5%, rgba(0,0,0,0) 1.5%); 
+    border-radius: 12px;
+    padding: 12px 12px 12px 12px;
+    
+}
+
+.project-text {
+    padding-right: 75px;
+}
+
+.project-actions {
+    display: grid;
+    justify-content: end;
+    padding-right: 30px;
+}
+
+.project-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+    gap: 15px;
+}
+
+.project-actions-grid img {
+    width: 20px;
 }
 
 .side-content {
