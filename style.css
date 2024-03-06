@@ -4,31 +4,56 @@
 }
 
 body {
-    background: rgb(25,146,212);
-    background: linear-gradient(90deg, rgba(25,146,212,1) 0%, rgba(8,122,185,1) 21%);
+    background: #C6CFC5;
     margin: 0;
+    font-family: 'Inter';
+}
+
+button {
+    border: 0;
+    background: none;
+    padding: 0;
+}
+
+button img {
+    width: 20px;
+    color: white;
 }
 
 .container {
     display: grid;
-    grid-template: auto auto / 1fr 5fr;
+    grid-template: 1fr / 1fr 4fr;
+    min-height: 100vh;
+    color: #322838;
+
 }
 
 .side-bar {
     grid-row: 1 / 4;
     box-shadow: 5px 0px 0px #126ea1;
+    padding-left: 15px;
+    padding-top: 15px;
 }
 
 .logo {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: bolder;
+    align-items: center;
 }
 
 .logo img {
     width: 50px;
 }
 
-.pages img {
+.logo p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.pages img, .preferences img {
     width: 30px;
 }
 
@@ -37,8 +62,19 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     justify-items: start;
-    padding: 0;
-    
+    padding: 0; 
+    align-items: center;
+    gap: 15px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pages p, .preferences p {
+    margin: 0;
+}
+
+.pages {
+    margin-bottom: 30px;
 }
 
 .header {
@@ -49,30 +85,56 @@ body {
 
 .top-bar {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    /* TOOD: set max height (maybe use minmax in template?) */
 }
 
 .search-bar {
     /* Possibly need to grid to make sure its horizontal */
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 10fr;
+    
+}
+
+.search-bar input {
+    border-radius: 25px;
+    height: 21px;
+    max-width: 80%;
+    
+}
+
+#search-icon {
+    height: 23px;
+    width: 23px;
 }
 
 .user-bar {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 15px;
+    justify-items: center;
 }
 
 .user-bar button {
     height: 50px;
 }
 
+#bell {
+    width: 25px;
+}
+
 .user {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    gap: 15px;
+    justify-items: center;
 }
 
 .user-actions {
     grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     /* gap: 15%; */
     /* Instead of gap, justify actions to end? */
 }
@@ -93,7 +155,11 @@ body {
 }
 
 .actions button {
-    border-radius: 12px;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    padding: auto;
+    background: #C6CFC5;
 } 
 
 .user-profile {
